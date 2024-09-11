@@ -1,0 +1,62 @@
+\documentclass[upright, contnum]{umemoria}
+
+%fix for the oneside argument
+\makeatletter
+\g@addto@macro\titlepage{\pagenumbering{Alph}}
+\g@addto@macro\endtitlepage{\pagenumbering{roman}}
+\makeatother
+
+\depto{Departamento de Ingeniería Industrial}
+\author{Andrea Ignacia Canales Gutierrez}
+\title{Essays on Anti-Competitive Behavior}
+\auspicio{}
+\date{Octubre 2018}
+\guia{Juan Escobar Castro}
+\carrera{Doctora en Sistemas de Ingeniería}
+\memoria{Tesis para optar al Grado de \break  Doctora en Sistemas de Ingeniería}
+\comision{Leonardo Basso Sotz, Gastón Llanes, Matteo Triossi Verondini}
+
+\usepackage{lipsum}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+
+\begin{abstract}
+{En esta tesis, a raíz de dos problemas distintos, se estudia cómo la entrada de nuevas firmas a un mercado puede modificar los incentivos a desarrollar conductas anticompetitivas por parte de la o las firmas incumbentes. En primer lugar, estudiamos un problema de colusión con entrada de nuevas firmas. Por otra parte, se modelan los incentivos a utilizar estrategias predatorias cuando los costos de producción pueden disminuir o aumentar, dependiendo si logran acumular experiencia en el mercado o no.
+En el capítulo 1 se estudian los carteles incompletos. La evidencia muestra que, en muchos casos, los acuerdos colusivos no se conforman con la participación de todas las firmas del mercado si no que, un grupo de firmas convive con una franja competitiva de empresas, estos se denominan carteles incompletos. En este contexto estudiamos el acuerdo colusivo óptimo, donde las variaciones de precio, por parte de las firmas que lo fijan, pueden generar entrada o salida de firmas de la franja, y por tanto, cambiar la estructura del mercado. En este modelo, una firma que se desvía del acuerdo colusivo puede tener incentivos a fijar un precio muy bajo, con el objetivo de sacar del mercado firmas de la franja competitiva. Esta salida se produce solo si las firmas de la franja esperan un castigo severo por parte del cartel ante el desvío, es decir,una etapa de castigo donde se observarían precios muy bajos. Este trabajo identifica un nuevo trade-off entre la severidad del castigo y las ganancias del desvío de un acuerdo colusivo.
+En el capítulo 2 se aborda un problema de predación. Se ha documentado que en al- gunos mercados, a medida que las firmas acumulan experiencia en la producción de bienes y/o servicios, disminuyen sus costos, este fenómeno de denomina learning-by-doing. Por otro lado, también se documenta que la pérdida de experiencia produce el fenómeno contrario, llamado organizational forgetting. En este capítulo de desarrolla un modelo general en un mercado donde pueden coexistir ambos efectos y se estudian los incentivos a utilizar estra- tegias predatorias. Se considera un modelo asimétrico, donde la firma incumbente tiene un mercado cautivo, y puede forzar la salida de una firma entrante. Se observa que ambas firmas pueden utilizar estrategias agresivas de precios pero con distintos objetivos: la incumbente para forzar la salida de la entrante, y esta última para evitar ser predada. Además, para un caso reducido, observamos que la interacción de learning-by-doing y organizational forgetting provoca una competencia en precios menos agresiva que si solo está presente uno de estos efectos en el mercado.}
+\end{abstract}
+
+\begin{dedicatoria} % opcional
+Una dedicatoria corta. Por ejemplo, al \emph{Centro Tecnológico Ucampus}
+\end{dedicatoria}
+
+\begin{thanks} % opcional
+\lipsum[1-2]
+\end{thanks}
+\cleardoublepage
+
+\tableofcontents
+\listoftables % opcional
+\listoffigures % opcional
+
+\mainmatter
+
+\input{intro.tex}
+\input{cap1.tex}
+\input{cap2.tex}
+\input{conclu.tex}
+
+% \input{glosario.tex} % opcional
+
+\bibliographystyle{plain}
+\bibliography{bibliografia}
+
+% \input{anexo_apendices.tex} % opcionales
+
+\end{document}
