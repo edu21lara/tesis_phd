@@ -1,0 +1,74 @@
+\documentclass[upright, contnum]{umemoria}
+
+\input{preamble} 
+
+%fix for the oneside argument
+\makeatletter
+\g@addto@macro\titlepage{\pagenumbering{Alph}}
+\g@addto@macro\endtitlepage{\pagenumbering{roman}}
+\makeatother
+
+\depto{Departamento de Ingeniería Industrial}
+\author{Eduardo Andrés Lara Sepúlveda}
+\title{The Role of Mobility in COVID-19 Infection Rates and the Redesign of Public Procurement Mechanisms in Chile}
+\auspicio{}
+\date{Noviembre 2024}
+\guia{Marcelo Olivares}
+\carrera{Doctora en Sistemas de Ingeniería}
+\memoria{Tesis para optar al Grado de \break  Doctor en Sistemas de Ingeniería}
+\comision{xxx, yyy, zzz}
+
+\usepackage{lipsum}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+
+\begin{abstract}
+{This thesis explores two distinct but significant areas of research 
+related to the COVID-19 pandemic in Chile: the role of mobility in 
+infection rates and the redesign of public procurement mechanisms. 
+The first part of the study examines how changes in population mobility 
+influenced the spread of COVID-19, using data-driven models to analyze 
+the relationship between movement patterns and infection curves across 
+different regions of Chile. The second part evaluates the redesign of 
+Chile's public procurement system, specifically focusing on the 
+"Convenio Marco" mechanism. The analysis assesses the effectiveness 
+and implications of these changes in terms of efficiency, transparency, 
+and market access. Together, these studies contribute to a deeper 
+understanding of pandemic responses and the role of public policies 
+in mitigating crises.}
+\end{abstract}
+
+\begin{dedicatoria} % opcional
+\cambiarlinea{ Una dedicatoria corta. Por ejemplo, al \emph{Centro Tecnológico Ucampus}}
+\end{dedicatoria}
+
+% \begin{thanks} % opcional
+% \lipsum[1-2]
+% \end{thanks}
+\cleardoublepage
+
+\tableofcontents
+\listoftables % opcional
+\listoffigures % opcional
+
+% \mainmatter
+
+% \input{intro.tex}
+% \input{cap1.tex}
+% \input{cap2.tex}
+% \input{conclu.tex}
+
+% \input{glosario.tex} % opcional
+
+\bibliographystyle{plain}
+\bibliography{bibliografia}
+
+% \input{anexo_apendices.tex} % opcionales
+
+\end{document}
