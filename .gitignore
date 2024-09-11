@@ -17,6 +17,8 @@
 **/*.lb
 *(busy)*
 *._**
+**/*.fdb_latexmk
+
 
 # Releases
 *.zip
