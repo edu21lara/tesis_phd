@@ -40,7 +40,7 @@ __MACOSX/
 main.pdf
 
 # Ignora tesis.pdf
-memoria.pdf
+tesis.pdf
 
 # Logs
 log.txt
