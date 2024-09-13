@@ -48,21 +48,25 @@ in mitigating crises.}
 \cambiarlinea{ Una dedicatoria corta. Por ejemplo, al \emph{Centro Tecnológico Ucampus}}
 \end{dedicatoria}
 
-% \begin{thanks} % opcional
-% \lipsum[1-2]
-% \end{thanks}
-\cleardoublepage
+\begin{thanks} % opcional
+    \cambiarlinea{} Quiero agradecer a mi profesor guía, Marcelo Olivares, por su apoyo constante 
+    durante el desarrollo de esta tesis. También agradezco a mi familia, amigos, 
+    y compañeros de trabajo por su paciencia y ánimo en este camino académico. 
+    Por último, agradezco al Centro Tecnológico Ucampus por el auspicio brindado.
+    \end{thanks}
+    
+\cleardoublepage % forzar un salto de página
 
 \tableofcontents
 \listoftables % opcional
 \listoffigures % opcional
 
-% \mainmatter
+\mainmatter % marca el comienzo del cuerpo principal, genera cambios de formato y numeración
 
-% \input{intro.tex}
-% \input{cap1.tex}
-% \input{cap2.tex}
-% \input{conclu.tex}
+\input{intro.tex}
+\input{cap1.tex}
+\input{cap2.tex}
+\input{conclu.tex}
 
 % \input{glosario.tex} % opcional
 
