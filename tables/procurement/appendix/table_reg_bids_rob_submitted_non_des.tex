@@ -1,0 +1,22 @@
+
+\begin{table}[H]
+   \centering
+   \begin{tabular}{lcccc}
+      \toprule
+       & Type 1         & Type 2         & Type 3         & Type 4 \\ & (1)            & (2)            & (3)            & (4)\\  
+      \midrule 
+      New                       & -0.123$^{***}$ & -0.125$^{***}$ & -0.118$^{***}$ & -0.115$^{***}$\\   
+                                & (0.005)        & (0.005)        & (0.006)        & (0.006)\\   
+      New $\times$ Comp  & -0.041$^{***}$ & -0.048$^{***}$ & -0.001         & -0.012\\   
+                                & (0.008)        & (0.009)        & (0.010)        & (0.010)\\   
+       \\
+      Observations              & 11,760         & 11,933         & 11,901         & 11,382\\  
+      R$^2$                     & 0.94768        & 0.93700        & 0.92620        & 0.92320\\  
+      Adjusted R$^2$            & 0.94537        & 0.93426        & 0.92297        & 0.91969\\  
+      \bottomrule
+   \end{tabular}
+   \par \raggedright 
+   \caption{Estimation for submitted bids under different outlier elimination rules. This table shows estimates for submitted bids according to  regression \eqref{eq:reg_sub_bid} for auctions that awarded at least one bid. Each model is defined by the type of method used for outlier detection according to section \ref{app:data}. Standardized product and region fixed effect are included in all Models. We compute \textit{robust} standard errors.}
+\end{table}
+
+

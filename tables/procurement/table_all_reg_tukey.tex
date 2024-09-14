@@ -1,0 +1,27 @@
+
+\begin{table}[H] \centering 
+\footnotesize 
+\setlength\extrarowheight{-1pt}
+\begin{tabular}{@{\extracolsep{-10pt}}lccp{1cm}cc} 
+\toprule
+ & \multicolumn{2}{c}{\textit{Bids}} & & \multicolumn{2}{c}{\textit{Prices}}\\ 
+\cline{2-3} \cline{5-6} 
+ & Submitted & Awarded && Posted & Transaction \\ 
+& (1) & (2) && (3) & (4)\\ 
+\hline
+\\
+ New FA & $-$0.141$^{***}$ & $-$0.055$^{***}$ & & $-$0.025$^{***}$ & 0.004$^{***}$ \\ 
+  & (0.006) & (0.007) & &(0.001) & (0.002) \\
+  \\
+ New FA $\times$ Competitive & 0.002 & $-$0.081$^{***}$ & & $-$0.092$^{***}$ & $-$0.082$^{***}$ \\ 
+ & (0.010) & (0.013) & & (0.001) & (0.002) \\ 
+ \\
+\hline 
+Observations & 12,349 & 11,382 & & 973,195 & 180,421 \\ 
+R$^{2}$ & 0.923 & 0.892 & & 0.961 & 0.974 \\ 
+Adjusted R$^{2}$ & 0.920 & 0.887 & & 0.961 & 0.974 \\ 
+\bottomrule
+\multicolumn{5}{l}{\textit{Note:}  $^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\caption{\label{tab:main_results} Main estimation results measuring the effect of the new FA design and the level of competition in the auction stage on bids and prices. All the specifications include product and region fixed effects. {For regressions with Bid prices, some auctions were not awarded and therefore the number of observations drops when using awarded bids (column (2)). Regressions with posted and transaction prices (columns (3) and (4)) include product category-specific calendar week dummies to control for seasonality. Since not all products are sold every week, the transaction price regressions have fewer observations relative to posted prices.} Robust standard errors for each estimated coefficient are reported in parentheses for all the models.}
+\end{table} 

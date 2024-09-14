@@ -1,0 +1,28 @@
+\begin{table}[H]
+\centering 
+\renewcommand{\TPTminimum}{\linewidth}
+\small{
+\begin{threeparttable}
+\makebox[\linewidth]{%
+%\setlength\extrarowheight{-3pt}
+\begin{tabular}{@{\extracolsep{-5pt}} p{8cm}ll} 
+\\\hline 
+ & \multicolumn{2}{c}{No. of Products (\% sales)}\\ 
+ \cline{2-3}
+ & FA 2014 & FA 2017 \\ 
+\hline \\[-2.5ex] 
+Total number of \textit{pantry} products & 8,937 (100\%) & 3,789 (100\%) \\
+Products with identified attributes & 7,642 (92.4\%) & 3,704 (97.3\%) \\
+Unique products based on selected attributes & 2,703 (92.4\%) & 2,027 (97.3\%) \\
+Matched products across FAs & 928 (68.2\%) & 928 (74.1\%) \\ 
+\hline 
+\end{tabular}}
+% \begin{tablenotes}
+%   \small
+%      \item \textit{Note:} This table summarizes the results of the product standardization process. We say that a SKU is feasible if all the following attributes were identified: \textit{subcategory}, \textit{type}, \textit{brand} and \textit{format}. The mentioned attributes define a unique Standardized product.
+%    \end{tablenotes}
+\end{threeparttable}
+}
+\caption{Product identification summary for all \textit{pantry} products {-- packaged products which can be described through standardized attributes --} in the 2014 (old) and 2017 (new) FAs. The last row counts unique products that were found in both FAs.}
+\label{tab:matching_results}
+\end{table} 
