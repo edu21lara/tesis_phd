@@ -2,13 +2,106 @@
 \usepackage{amsmath}
 \usepackage{cancel}
 \usepackage{ulem}
-\usepackage{xcolor}
-
 % Otros paquetes y configuraciones que quieras agregar
 
 % comandos para comentarios
 \newcommand{\redline}{\color{red}\noindent}
 \newcommand{\cambiarlinea}[1]{\noindent\textcolor{red}{(cambiar -->) #1}}
-\newcommand{\comel}[1]{\noindent\textcolor{blue}{(comment-el: #1)}}
-\newcommand{\comtc}[1]{\noindent\textcolor{magenta}{(comment-el: #1)}}
+\newcommand{\noteEL}[1]{\noindent\textcolor{purple}{(comment-el: #1)}}
+\newcommand{\noteTC}[1]{\noindent\textcolor{magenta}{(comment-el: #1)}}
 % purple, orange, cyan
+
+
+% % -- preamble procurement paper
+% % \input{preamble-procurement-paper.tex}
+
+% % preamble-procurement-paper
+% \def\NN{\mathbb{N}}
+% \def\ZZ{\mathbb{Z}}
+% \def\PP{\mathbb{P}}
+% \def\QQ{\mathbb{Q}}
+% \def\RR{\mathbb{R}}
+% \def\CC{\mathbb{C}}
+% \def\EE{\mathbb{E}}
+% \def \rr{ {I\!\!R}}
+% \def\cc{{\cal{C}}}
+% \def\dis{\displaystyle}
+% \def\Var{\text{Var}}
+% \def\o{\sigma}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts,setspace}
+\usepackage{threeparttable}
+\usepackage{dsfont}
+\usepackage{color}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amssymb}
+\usepackage{anysize} %para marginsize%
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{rotating}
+\usepackage{comment}
+\newcommand{\tblue}[1]{\textcolor{blue}{#1}}
+\usepackage{fancyhdr}
+\usepackage{color,soul}
+\usepackage{lscape}
+\usepackage{booktabs, caption, makecell}
+\usepackage[format=hang,font=small,labelfont=bf]{caption}
+\usepackage{natbib} 
+\usepackage{authblk}
+\usepackage{setspace}
+\usepackage{ulem}
+
+\usepackage{hyperref}
+ \hypersetup{
+     colorlinks=true,
+     linkcolor=blue,
+     filecolor=blue,
+     citecolor = black,      
+     urlcolor=cyan,
+     }
+\hypersetup{linkcolor=black}
+
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{makecell}
+\usepackage{lipsum}
+
+
+% for marking changes and notes
+\usepackage{xcolor, soul}
+
+% Uncomment next line to remove comments
+%\def\nocomments{1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \newcommand{\dani}[1]{{\color{red}[D: #1 ]}}
+% \newcommand{\ds}[1]{{\color{red}[D: #1 ]}}
+
+% \newcommand{\piero}[1]{{\color{red}[P: #1 ]}}
+
+% %\setlength{\parskip}{0.5cm}
+% \newcommand{\newgw}[1]{\noindent \textcolor{blue}{#1}}
+% \newcommand{\delgw}[1]{{\color{blue} \sout{#1}}}
+% \newcommand{\noteGW}[1]{\noindent \textcolor{magenta}{{\textbf{[NOTE GW:} #1}]}}
+% \newcommand{\newMO}[1]{\noindent \textcolor{purple}{#1}}
+% \newcommand{\delMO}[1]{{\color{purple} \sout{#1}}}
+
+% \newcommand{\noteMO}[1]{\noindent \textcolor{red}{{\textbf{NOTE MO:} #1}}}
+% \newcommand{\highMO}[1]{\noindent \textcolor{blue}{\hl{#1}}}
+\ifx\nocomments\undefined
+\newcommand{\todoMO}[1]{\noindent \textcolor{blue}{\todo[backgroundcolor=yellow]{ #1}}}
+\else 
+\newcommand{\todoMO}[1]{}
+\fi 
+
+
+% \newcommand{\newpiero}[1]{\noindent \textcolor{olive}{#1}}
+\usepackage{todonotes}
+
+\usepackage{soul}
+\setstcolor{red}
