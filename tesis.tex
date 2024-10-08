@@ -1,4 +1,5 @@
-\documentclass[upright, contnum]{umemoria}
+% \documentclass[upright, contnum]{umemoria}
+\documentclass[upright, contnum]{umemoriaENG}
 
 \input{preamble} 
 
@@ -10,9 +11,12 @@
 
 \depto{Departamento de Ingeniería Industrial}
 \author{Eduardo Andrés Lara Sepúlveda}
-\title{The Role - of Mobility in COVID-19 Infection Rates and the Redesign of Public Procurement Mechanisms in Chile}
+% \title{The Role - of Mobility in COVID-19 Infection Rates and the Redesign of Public Procurement Mechanisms in Chile}
+\title{Data-Driven Approaches for Public Sector Decision-Making: Insights from Pandemic Management and Public Procurement}
+% \title{Improving Public Sector Efficiency Through Data Science: Case Studies on Pandemic Response and Public Procurement}
+% \title{Data-Driven Solutions for Government: Managing Pandemic Mobility and Optimizing Public Procurement}
 \auspicio{}
-\date{Noviembre 2024}
+\date{2024}
 \guia{Marcelo Olivares}
 \carrera{Doctora en Sistemas de Ingeniería}
 \memoria{Tesis para optar al Grado de \break  Doctor en Sistemas de Ingeniería}
@@ -29,30 +33,38 @@
 \maketitle
 
 \begin{abstract}
-{This thesis explores two distinct but significant areas of research 
-related to the COVID-19 pandemic in Chile: the role of mobility in 
-infection rates and the redesign of public procurement mechanisms. 
-The first part of the study examines how changes in population mobility 
-influenced the spread of COVID-19, using data-driven models to analyze 
-the relationship between movement patterns and infection curves across 
-different regions of Chile. The second part evaluates the redesign of 
-Chile's public procurement system, specifically focusing on the 
-"Convenio Marco" mechanism. The analysis assesses the effectiveness 
-and implications of these changes in terms of efficiency, transparency, 
-and market access. Together, these studies contribute to a deeper 
-understanding of pandemic responses and the role of public policies 
-in mitigating crises.}
+
+Esta tesis examina la aplicación de la ciencia de datos para mejorar la toma de decisiones en el sector público, enfocándose en dos áreas clave: la gestión de la pandemia de COVID-19 y la optimización de los procesos de contratación pública.
+
+El primer caso analiza los patrones de movilidad durante los confinamientos en Santiago, Chile, revelando diferencias socioeconómicas significativas en el cumplimiento de las medidas sanitarias. Estos hallazgos ayudaron a diseñar políticas de salud pública más focalizadas.
+
+El segundo caso aborda las ineficiencias en el sistema de contratación pública "Convenio Marco" de Chile, proponiendo reformas basadas en el análisis de datos para mejorar la transparencia y eficiencia en el gasto público, y evaluando su impacto en términos de ahorro para el Estado.
+
+En conjunto, esta investigación resalta el potencial de los enfoques basados en datos para enfrentar desafíos complejos y mejorar los resultados de las políticas públicas.
+    
 \end{abstract}
 
-\begin{dedicatoria} % opcional
-\cambiarlinea{ Una dedicatoria corta. Por ejemplo, al \emph{Centro Tecnológico Ucampus}}
-\end{dedicatoria}
+\begin{abstractEng}
+
+This thesis examines the application of data science to improve decision-making in the public sector, focusing on two key areas: the management of the COVID-19 pandemic and the optimization of public procurement processes.
+
+The first case analyzes mobility patterns during lockdowns in Santiago, Chile, revealing significant socioeconomic differences in compliance with health measures. These findings helped design more targeted public health policies.
+
+The second case addresses inefficiencies in Chile's public procurement system, "Convenio Marco," proposing data-driven reforms to improve transparency and efficiency in public spending, while evaluating their impact in terms of savings for the state.
+
+Together, this research highlights the potential of data-driven approaches to tackle complex challenges and improve public policy outcomes.
+\end{abstractEng} 
+
+
+% \begin{dedicatoria} % opcional
+% \cambiarlinea{ Una dedicatoria corta. Por ejemplo, al \emph{Centro Tecnológico Ucampus}}
+% \end{dedicatoria}
 
 \begin{thanks} % opcional
-    \cambiarlinea{} Quiero agradecer a mi profesor guía, Marcelo Olivares, por su apoyo constante 
+    Quiero agradecer a mi profesor guía, Marcelo Olivares, por su apoyo constante 
     durante el desarrollo de esta tesis. También agradezco a mi familia, amigos, 
     y compañeros de trabajo por su paciencia y ánimo en este camino académico. 
-    Por último, agradezco al Centro Tecnológico Ucampus por el auspicio brindado.
+    Por último, agradezco al Instituto de Sistemas Complejos de Ingeniería (ISCI) por el apoyo brindado.
     \end{thanks}
     
 \cleardoublepage % forzar un salto de página
@@ -63,7 +75,7 @@ in mitigating crises.}
 
 \mainmatter % marca el comienzo del cuerpo principal, genera cambios de formato y numeración
 
-% \input{intro.tex}
+\input{intro.tex}
 \input{procurement-paper.tex}
 \input{pandemic-paper.tex}
 % \input{cap2.tex}
