@@ -40,11 +40,10 @@
 \RequirePackage{pgffor} % foreach
 
 %% Lenguaje
-\addto\captionsspanish{\renewcommand\tablename{Table}}
-\addto\captionsspanish{\renewcommand\contentsname{Contents}}
-\addto\captionsspanish{\renewcommand\listtablename{List of Tables}}
-\addto\captionsspanish{\renewcommand\listfigurename{List of Figures}}
-\addto\captionsspanish{\renewcommand\chaptername{Chapter}}
+\addto\captionsspanish{\renewcommand\tablename{Tabla}}
+\addto\captionsspanish{\renewcommand\contentsname{Tabla de Contenido}}
+\addto\captionsspanish{\renewcommand\listtablename{Índice de Tablas}}
+\addto\captionsspanish{\renewcommand\listfigurename{Índice de Ilustraciones}}
 
 %% Interlineado
 \RequirePackage{parskip}
@@ -61,8 +60,7 @@
 
 %% Entornos nuevos
 \newenvironment{abstract}{%
-\clearpage
-%\cleardoublepage
+\cleardoublepage
 \begin{flushright}
 \small
 \begin{tabular}{l}
@@ -76,35 +74,13 @@ PROF. GUÍA: \foreach \x in \@guia { \MakeUppercase\x }
 \begin{center}
 \MakeUppercase\@title
 \end{center}
-}%{\vfill\null}
+}{\vfill\null}
 
-\newenvironment{abstractEng}{%
-	\clearpage
-	%\cleardoublepage
-	\begin{flushright}
-		\small
-		\begin{tabular}{l}
-			ABSTRACT OF THE THESIS  \\
-			FOR THE DEGREE OF \MakeUppercase\@carrera \\
-			BY: \MakeUppercase\@author \\
-			DATE: \MakeUppercase\@date\\
-			ADVISOR: \foreach \x in \@guia { \MakeUppercase\x }
-		\end{tabular}
-	\end{flushright}
-	\begin{center}
-		\MakeUppercase\@title
-	\end{center}
-}%{\vfill\null}
-
-\newenvironment{dedicatoria}{\clearpage\null\vspace{\stretch{1}}\begin{flushright}\itshape}{\end{flushright}\vspace{\stretch{2}}\null}
-%\newenvironment{dedicatoria}{\cleardoublepage\null\vspace{\stretch{1}}\begin{flushright}\itshape}{\end{flushright}\vspace{\stretch{2}}\null} % LO QUITÉ
+\newenvironment{dedicatoria}{\cleardoublepage\null\vspace{\stretch{1}}\begin{flushright}\itshape}{\end{flushright}\vspace{\stretch{2}}\null}
 \let\thanks\undefined
-
-\newenvironment{thanks}{\chapter*{Acknowledgment}}{\vfill\null}
-%\newenvironment{thanks}{\cleardoublepage\chapter*{Acknowledgment}}{\vfill\null} LO QUITÉ
-\newenvironment{intro}{\addcontentsline{toc}{chapter}{\protect\numberline{}Introduction}\chapter*{Introduction}}{\vfill\null}
-\newenvironment{conclusion}{\addcontentsline{toc}{chapter}{\protect\numberline{}Conclusion}\chapter*{Conclusion}}{\vfill\null}
-
+\newenvironment{thanks}{\cleardoublepage\chapter*{Agradecimientos}}{\vfill\null}
+\newenvironment{intro}{\addcontentsline{toc}{chapter}{\protect\numberline{}Introducción}\chapter*{Introducción}}{\vfill\null}
+\newenvironment{conclusion}{\addcontentsline{toc}{chapter}{\protect\numberline{}Conclusión}\chapter*{Conclusión}}{\vfill\null}
 
 %% Teoremas, proofs, etc
 \renewenvironment{proof}[1][\proofname] {\par\pushQED{\qed}\normalfont\topsep6\p@\@plus6\p@\relax\trivlist\item[\hskip\labelsep\scshape\footnotesize#1\@addpunct{.}]\ignorespaces}{\popQED\endtrivlist\@endpefalse}

@@ -42,12 +42,12 @@
 %% Lenguaje
 \addto\captionsspanish{\renewcommand\tablename{Table}}
 \addto\captionsspanish{\renewcommand\figurename{Figure}}
-\addto\captionsspanish{\renewcommand\contentsname{Contents}}
+\addto\captionsspanish{\renewcommand\contentsname{Table of Content}}
 \addto\captionsspanish{\renewcommand\listtablename{List of Tables}}
 \addto\captionsspanish{\renewcommand\listfigurename{List of Figures}}
 \addto\captionsspanish{\renewcommand\chaptername{Chapter}}
 \addto\captionsspanish{\renewcommand\bibname{Bibliography}}
-\addto\captionsspanish{\renewcommand\appendixname{Appendix}}
+\addto\captionsspanish{\renewcommand\appendixname{Annex}}
 
 %% Interlineado
 \RequirePackage{parskip}
@@ -69,15 +69,15 @@
 \begin{flushright}
 \small
 \begin{tabular}{l}
-RESUMEN DE LA MEMORIA PARA OPTAR \\
-AL TÍTULO DE \MakeUppercase\@carrera \\
+RESUMEN DE LA TESIS PARA OPTAR \\
+AL GRADO DE \MakeUppercase\@carrera \\
 POR: \MakeUppercase\@author \\
 FECHA: \MakeUppercase\@date\\
 PROF. GUÍA: \foreach \x in \@guia { \MakeUppercase\x }
 \end{tabular}
 \end{flushright}
 \begin{center}
-\MakeUppercase\@title
+\MakeUppercase\@titulo
 \end{center}
 }%{\vfill\null}
 
@@ -164,6 +164,11 @@ PROF. GUÍA: \foreach \x in \@guia { \MakeUppercase\x }
 \newcommand{\setdepto}[1]{\def\@depto{#1}}
 \let\depto\setdepto
 \let\setdepto\relax
+
+\global\let\@titulo\@empty
+\newcommand{\settitulo}[1]{\def\@titulo{#1}}
+\let\titulo\settitulo
+\let\settitulo\relax
 
 \global\let\@comision\@empty
 \newcommand{\setcomision}[1]{\def\@comision{#1}}

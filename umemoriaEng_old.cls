@@ -7,7 +7,7 @@
 %%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NeedsTeXFormat{LaTeX2e}[2009/09/24]
-\ProvidesClass{umemoria}[2012/06/18 v1.2 Clase LaTeX para estandarizacion de Memorias U. de Chile]
+\ProvidesClass{umemoriaEng}[2012/06/18 v1.2 Clase LaTeX para estandarizacion de Memorias U. de Chile. Adaptado por Renny Marquez en el 2021 para Ingles]
 
 %% Definicion de Condicionales
 \newif\if@swapnum
@@ -28,7 +28,7 @@
 %% Pasar Opciones a clase Book
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions\relax
-\LoadClass[12pt, openany]{book}
+\LoadClass[12pt, openany, oneside]{book}%Onesided agregado en versión de 2021
 
 %% Packages necesarios
 \RequirePackage[utf8]{inputenc} %Encoding
@@ -41,10 +41,13 @@
 
 %% Lenguaje
 \addto\captionsspanish{\renewcommand\tablename{Table}}
-\addto\captionsspanish{\renewcommand\contentsname{Contents}}
+\addto\captionsspanish{\renewcommand\figurename{Figure}}
+\addto\captionsspanish{\renewcommand\contentsname{Table of Content}}
 \addto\captionsspanish{\renewcommand\listtablename{List of Tables}}
 \addto\captionsspanish{\renewcommand\listfigurename{List of Figures}}
 \addto\captionsspanish{\renewcommand\chaptername{Chapter}}
+\addto\captionsspanish{\renewcommand\bibname{Bibliography}}
+\addto\captionsspanish{\renewcommand\appendixname{Appendix}}
 
 %% Interlineado
 \RequirePackage{parskip}
@@ -66,8 +69,8 @@
 \begin{flushright}
 \small
 \begin{tabular}{l}
-RESUMEN DE LA MEMORIA PARA OPTAR \\
-AL TÍTULO DE \MakeUppercase\@carrera \\
+RESUMEN DE LA TESIS PARA OPTAR \\
+AL GRADO DE \MakeUppercase\@carrera \\
 POR: \MakeUppercase\@author \\
 FECHA: \MakeUppercase\@date\\
 PROF. GUÍA: \foreach \x in \@guia { \MakeUppercase\x }
@@ -115,21 +118,21 @@ PROF. GUÍA: \foreach \x in \@guia { \MakeUppercase\x }
 	\swapnumbers
 \fi
 \theoremstyle{miestilo}
-\newtheorem{defn}{Definición}[chapter]
+\newtheorem{defn}{Definition}[chapter]
 \if@contnum
-\newtheorem{teo}[defn]{Teorema}
-\newtheorem{cor}[defn]{Corolario}
-\newtheorem{lema}[defn]{Lema}
-\newtheorem{prop}[defn]{Proposición}
+\newtheorem{teo}[defn]{Theorem}
+\newtheorem{cor}[defn]{Corollary}
+\newtheorem{lema}[defn]{Lemma}
+\newtheorem{prop}[defn]{Proposition}
 \else
-\newtheorem{teo}{Teorema}[chapter]
-\newtheorem{cor}{Corolario}[chapter]
-\newtheorem{lema}{Lema}[chapter]
-\newtheorem{prop}{Proposición}[chapter]
+\newtheorem{teo}{Theorem}[chapter]
+\newtheorem{cor}{Corollary}[chapter]
+\newtheorem{lema}{Lemma}[chapter]
+\newtheorem{prop}{Proposition}[chapter]
 \fi
 \theoremstyle{miobs}
-\newtheorem*{ej}{Ejemplo}
-\newtheorem*{obs}{Observación}
+\newtheorem*{ex}{Example}
+\newtheorem*{rem}{Remark}
 
 %% Comandos para la portada
 \global\let\@carrera\@empty
@@ -146,6 +149,16 @@ PROF. GUÍA: \foreach \x in \@guia { \MakeUppercase\x }
 \newcommand{\setguia}[1]{\def\@guia{#1}}
 \let\guia\setguia
 \let\setguia\relax
+
+\global\let\@guiados\@empty
+\newcommand{\setguiados}[1]{\def\@guiados{#1}}
+\let\guiados\setguiados
+\let\setguiados\relax
+
+\global\let\@coguia\@empty
+\newcommand{\setcoguia}[1]{\def\@coguia{#1}}
+\let\coguia\setcoguia
+\let\setcoguia\relax
 
 \global\let\@depto\@empty
 \newcommand{\setdepto}[1]{\def\@depto{#1}}
@@ -183,9 +196,16 @@ PROF. GUÍA: \foreach \x in \@guia { \MakeUppercase\x }
 			\MakeUppercase\@author
 
 		\vspace{3cm}
-			\foreach \x [count=\xi] in \@guia {
-				PROFESOR GUÍA\ifnum\xi>1 \ \xi \fi:\\ \MakeUppercase\x\\
-			}
+		PROFESOR GUÍA:\\ \MakeUppercase \@guia\\
+		%	\foreach \x [count=\xi] in \@guia {
+		%		PROFESOR GUÍA\ifnum\xi>1 \ \xi \fi:\\ \MakeUppercase\x\\
+		%	}
+		%	\foreach \x [count=\xi] in \@guiados {
+		%		PROFESOR GUÍA 2\ifnum\xi>1 \ \xi \fi:\\ \MakeUppercase\x\\
+		%	}
+		%	\foreach \x [count=\xi] in \@coguia {
+		%		PROFESOR CO-GUÍA\ifnum\xi>1 \ \xi \fi:\\ \MakeUppercase\x\\
+		%	}
 
 		\vspace{1cm}
 			MIEMBROS DE LA COMISIÓN:\\
